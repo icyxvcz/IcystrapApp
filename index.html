@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Icystrap</title>
+
+    <meta
+      name="description"
+      content="Icystrap is an alternative launcher for Roblox, built in the spirit of Bloxstrap. Rich Discord presence, easy modding, FastFlag bypass using Imtheo offsets, and a clean, lightweight installer."
+    />
+    <meta name="theme-color" content="#05070d" />
+    <meta name="color-scheme" content="dark" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Icystrap" />
+    <meta
+      property="og:description"
+      content="An alternative launcher for Roblox with rich Discord presence, easy modding and unrestricted FastFlag control via Imtheo offsets."
+    />
+    <meta property="og:image" content="assets/img/Icystrap.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="assets/img/Icystrap.png" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/img/Icystrap.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="bg-fx" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container">
+        <nav class="nav" aria-label="Main">
+          <a class="brand" href="#top">
+            <img src="assets/img/Icystrap.png" alt="" width="34" height="34" />
+            <span>Icystrap<small></small></span>
+          </a>
+
+          <ul class="nav-links" id="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#mods">Mods</a></li>
+            <li><a href="#install">Install</a></li>
+            <li>
+              <a
+                href="https://github.com/icyxvcz/IcystrapApp"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
+            </li>
+          </ul>
+
+          <div class="nav-actions">
+            <a
+              class="btn btn-ghost btn-sm"
+              href="https://discord.gg/43nUV95XsZ"
+              target="_blank"
+              rel="noopener"
+              >Discord</a
+            >
+            <a
+              class="btn btn-primary btn-sm"
+              href="https://github.com/icyxvcz/Icystrap/releases/download/Icystrap/Icystrap.exe"
+            >
+              <i class="ri-download-2-line" aria-hidden="true"></i>
+              Download
+            </a>
+            <button
+              class="nav-toggle"
+              type="button"
+              aria-label="Toggle navigation"
+              aria-expanded="false"
+              aria-controls="nav-links"
+            >
+              <i class="ri-menu-line" aria-hidden="true"></i>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ============================== HERO ============================== -->
+      <section class="hero" id="top">
+        <div class="container">
+          <div class="hero-grid">
+            <div>
+              <p class="pill">
+                <span class="dot" aria-hidden="true"></span>
+                Windows 10 / 11 &middot;
+                <span data-latest-version>latest release</span>
+              </p>
+
+              <h1>Get more out of <span class="grad-text">Roblox</span></h1>
+
+              <p class="hero-lead">
+                Icystrap — a better Roblox launcher, built on the same idea as
+                Bloxstrap. It's got the stuff you actually care about: proper
+                Discord rich presence, modding that doesn't make you want to
+                tear your hair out, FastFlag bypass, and a server browser that's
+                actually nice to look at. All of it without dragging your FPS
+                down.
+              </p>
+
+              <div class="hero-cta">
+                <a
+                  class="btn btn-primary btn-lg"
+                  href="https://github.com/icyxvcz/Icystrap/releases/download/Icystrap/Icystrap.exe"
+                >
+                  <i class="ri-download-2-line" aria-hidden="true"></i>
+                  Download for Windows
+                </a>
+                <a
+                  class="btn btn-ghost btn-lg"
+                  href="https://github.com/icyxvcz/IcystrapApp"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="ri-github-fill" aria-hidden="true"></i>
+                  View on GitHub
+                </a>
+              </div>
+
+              <p class="hero-note">
+                Installs alongside Roblox &mdash; nothing is replaced, nothing
+                is broken.
+              </p>
+
+              <ul class="hero-meta">
+                <li>
+                  <i class="ri-check-line" aria-hidden="true"></i>
+                  Discord Rich Presence
+                </li>
+                <li>
+                  <i class="ri-check-line" aria-hidden="true"></i>
+                  Easy mod importing
+                </li>
+                <li>
+                  <i class="ri-check-line" aria-hidden="true"></i>
+                  FastFlag bypass
+                </li>
+              </ul>
+            </div>
+
+            <a
+              class="app-shot reveal"
+              href="assets/img/ss.png"
+              target="_blank"
+              rel="noopener"
+              aria-label="Open the Icystrap launcher screenshot at full size"
+            >
+              <img
+                src="assets/img/ss.png"
+                width="1451"
+                height="899"
+                decoding="async"
+                alt="The Icystrap launcher window, with a sidebar for Bootstrapper, Deployment, Region Selector, Accounts, Mods, FastFlags, Appearance, Shortcuts, Global Settings and Settings, alongside a friends row, a Continue Playing section and a grid of Underrated Games each with a Play button."
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== STATS ============================== -->
+      <section
+        class="section"
+        style="padding-top: 0"
+        aria-label="Project facts"
+      >
+        <div class="container">
+          <div class="stats reveal">
+            <div class="stat"><b>100%</b><span>Free to use</span></div>
+            <div class="stat">
+              <b>Win 10/11</b><span>Supported systems</span>
+            </div>
+            <div class="stat">
+              <b data-latest-version>Latest</b><span>Current release</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== FEATURES ============================== -->
+      <section class="section" id="features">
+        <div class="container">
+          <div class="section-head center reveal">
+            <span class="eyebrow">Features</span>
+            <h2 class="section-title">Features</h2>
+          </div>
+
+          <div class="grid grid-3">
+            <article class="card reveal">
+              <div class="card-icon">
+                <i class="ri-discord-line" aria-hidden="true"></i>
+              </div>
+              <h3>Discord Rich Presence</h3>
+              <p>
+                Show the game you're playing, your current server and how long
+                you've been in it &mdash; right on your Discord profile. Works
+                out of the box, no plugins needed.
+              </p>
+            </article>
+
+            <article class="card reveal">
+              <div class="card-icon">
+                <i class="ri-paint-brush-line" aria-hidden="true"></i>
+              </div>
+              <h3>Mods that survive updates</h3>
+              <p>
+                Replace cursors, fonts, textures and skyboxes with community
+                mods. Icystrap keeps your files separate, so a Roblox update
+                can't wipe your setup.
+              </p>
+            </article>
+
+            <article class="card reveal">
+              <div class="card-icon">
+                <i class="ri-equalizer-line" aria-hidden="true"></i>
+              </div>
+              <h3>FastFlag bypass</h3>
+              <p>
+                Icystrap bypasses Roblox's flag restrictions using Imtheo
+                offsets, so you can unlock FPS, change render behaviour or load
+                a known-good preset in one click. By using this you have to
+                check "Enable Runtime Flag Injector" in the Fast Flag Editor (⚠️
+                RUN AS ADMIN TO MAKE IT WORK OR YOU WILL ONLY BE USING
+                ALLOWLISTED FLAGS).
+              </p>
+            </article>
+
+            <article class="card reveal">
+              <div class="card-icon">
+                <i class="ri-search-line" aria-hidden="true"></i>
+              </div>
+              <h3>Server Selector</h3>
+              <p>
+                Search any game by name or Place ID, then narrow it down by
+                region, city and server size. Every result shows uptime, player
+                count and city with a Join button &mdash; so you pick the server
+                instead of taking whatever Roblox hands you.
+              </p>
+            </article>
+
+            <article class="card reveal">
+              <div class="card-icon">
+                <i class="ri-window-line" aria-hidden="true"></i>
+              </div>
+              <h3>Multi-instance</h3>
+              <p>
+                Open more than one Roblox client at the same time &mdash;
+                perfect for alt accounts, testing. It stays quietly in the
+                background, so it never gets in your way.
+              </p>
+            </article>
+
+            <article class="card reveal">
+              <div class="card-icon">
+                <i class="ri-shield-check-line" aria-hidden="true"></i>
+              </div>
+              <h3>Privacy</h3>
+              <p>
+                Your Roblox password is never requested or stored. Account
+                switching is opt-in &mdash; you add an account yourself, and you
+                can remove it whenever you like. Uninstall and everything goes
+                with it.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== SPLIT: DISCORD ============================== -->
+      <section class="section" id="discord">
+        <div class="container">
+          <div class="split">
+            <div class="reveal">
+              <span class="eyebrow">Integrations</span>
+              <h3>Icystrap RPC</h3>
+              <p>
+                Share what you're doing with a single click. Icystrap talks to
+                Discord directly, so your profile shows the real game name, the
+                real server and accurate timing &mdash; no messy manual status
+                updates.
+              </p>
+
+              <ul class="check-list">
+                <li>
+                  <i class="ri-check-line" aria-hidden="true"></i>
+                  Game name, game icon and session time and region.
+                </li>
+                <li>
+                  <i class="ri-check-line" aria-hidden="true"></i>
+                  Optional server region and job ID
+                </li>
+                <li>
+                  <i class="ri-check-line" aria-hidden="true"></i>
+                  Shows how many FastFlags you have enabled.
+                </li>
+                <li>
+                  <i class="ri-check-line" aria-hidden="true"></i>
+                  Privacy controls &mdash; hide anything you don't want shared
+                </li>
+              </ul>
+            </div>
+
+            <div class="split-art split-art--hug reveal">
+              <a
+                class="app-shot app-shot--native"
+                href="assets/img/ss2.png"
+                target="_blank"
+                rel="noopener"
+                aria-label="Open the Discord Rich Presence screenshot at full size"
+              >
+                <img
+                  src="assets/img/ss2.png"
+                  width="486"
+                  height="171"
+                  decoding="async"
+                  alt="The Discord Rich Presence card Icystrap produces: a Playing header above a Roblox game card with a baseplate thumbnail, the name Roblox, the description [UP] Just a baseplate, the creator The Local Maze, the region Dallas, Texas, United States, 185 FastFlags, plus a game timer and a 42x Streak badge."
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== SPLIT: MODS ============================== -->
+      <section class="section" id="mods">
+        <div class="container">
+          <div class="split reverse">
+            <div class="reveal">
+              <span class="eyebrow">Customisation</span>
+              <h3>Make Roblox look like yours</h3>
+              <p>
+                Each mod is a simple toggle in Icystrap's Presets tab, so your
+                setup lives outside the Roblox install and an update can't wipe
+                it.
+              </p>
+
+              <ul class="check-list">
+                <li>
+                  <i class="ri-check-line" aria-hidden="true"></i>
+                  Import mods from a files/folder
+                </li>
+                <li>
+                  <i class="ri-check-line" aria-hidden="true"></i>
+                  Toggle each mod on or off individually
+                </li>
+                <li>
+                  <i class="ri-check-line" aria-hidden="true"></i>
+                  Automatic backups so you can always revert
+                </li>
+                <li>
+                  <i class="ri-check-line" aria-hidden="true"></i>
+                  Works with any community mod packs
+                </li>
+              </ul>
+            </div>
+
+            <div class="split-art reveal">
+              <div class="asset-grid">
+                <div class="asset active cursor-demo">
+                  <i class="ri-cursor-line" aria-hidden="true"></i>
+                  Mouse cursor
+                </div>
+                <div class="asset active">
+                  <i class="ri-font-size" aria-hidden="true"></i>
+                  Custom font
+                </div>
+                <div class="asset active">
+                  <i class="ri-image-line" aria-hidden="true"></i>
+                  Old avatar editor background
+                </div>
+                <div class="asset active">
+                  <i class="ri-music-2-line" aria-hidden="true"></i>
+                  Emulate old character sounds
+                </div>
+                <div class="asset active asset--text">Preferred emoji type</div>
+              </div>
+
+              <div class="copy-row" style="margin-top: 16px">
+                <code>%LOCALAPPDATA%\Icystrap\Modifications</code>
+                <button class="copy-btn" type="button">
+                  <i class="ri-file-copy-line" aria-hidden="true"></i>
+                  <span class="copy-label">Copy</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== INSTALL ============================== -->
+      <section class="section" id="install">
+        <div class="container">
+          <div class="section-head center reveal">
+            <span class="eyebrow">Get started</span>
+            <h2 class="section-title">Installing Icystrap takes a minute</h2>
+            <p class="section-sub">
+              No complex setup, no configuration files to hand-edit. Download,
+              run, play.
+            </p>
+          </div>
+
+          <div class="steps" style="max-width: 820px; margin: 0 auto 48px">
+            <div class="step reveal">
+              <div class="step-num">1</div>
+              <div>
+                <h3>Download Icystrap</h3>
+                <p>
+                  Grab the latest <code>Icystrap.exe</code> from the releases
+                  page. It's a single, self-contained file.
+                </p>
+              </div>
+            </div>
+
+            <div class="step reveal">
+              <div class="step-num">2</div>
+              <div>
+                <h3>Run the installer</h3>
+                <p>
+                  Windows may show a popup prompt &mdash; choose
+                  <strong>More info</strong> then <strong>Run anyway</strong>.
+                  Icystrap installs to your user folder.
+                </p>
+              </div>
+            </div>
+
+            <div class="step reveal">
+              <div class="step-num">3</div>
+              <div>
+                <h3>Pick your options</h3>
+                <p>
+                  Turn on Discord Rich Presence, choose a mod set, tweak
+                  FastFlags.
+                </p>
+              </div>
+            </div>
+
+            <div class="step reveal">
+              <div class="step-num">4</div>
+              <div>
+                <h3>Play normally</h3>
+                <p>
+                  Launch Roblox the same way you always do. Icystrap handles the
+                  rest in the background.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-2" style="max-width: 820px; margin: 0 auto">
+            <div class="card reveal">
+              <h3>Requirements</h3>
+              <p>
+                Windows 10 or 11 (64-bit)<br />
+                An existing Roblox installation<br />
+                ~76.9 MB of free disk space
+              </p>
+            </div>
+            <div class="card reveal">
+              <h3>Uninstalling</h3>
+              <p>
+                Use <strong>Apps &amp; features</strong>, All configuration and
+                mods are removed with it.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== CTA ============================== -->
+      <section class="section" style="padding-top: 0">
+        <div class="container">
+          <div class="cta-band reveal">
+            <h2>Ready to get more out of Roblox?</h2>
+            <p>
+              Download Icystrap and see what your launcher has been missing.
+            </p>
+            <div class="hero-cta">
+              <a
+                class="btn btn-primary btn-lg"
+                href="https://github.com/icyxvcz/Icystrap/releases/download/Icystrap/Icystrap.exe"
+              >
+                <i class="ri-download-2-line" aria-hidden="true"></i>
+                Download Icystrap
+              </a>
+              <a
+                class="btn btn-ghost btn-lg"
+                href="https://discord.gg/43nUV95XsZ"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="ri-discord-fill" aria-hidden="true"></i>
+                Join the Discord
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================== FOOTER ============================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="#top">
+              <img
+                src="assets/img/Icystrap.png"
+                alt=""
+                width="34"
+                height="34"
+              />
+              <span>Icystrap<small>Roblox launcher</small></span>
+            </a>
+            <p>
+              An alternative launcher for Roblox with the features you actually
+              use. Not affiliated with Roblox Corporation in any way.
+            </p>
+            <div class="socials" style="margin-top: 16px">
+              <a
+                href="https://github.com/icyxvcz/IcystrapApp"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+              >
+                <i class="ri-github-fill" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://discord.gg/43nUV95XsZ"
+                target="_blank"
+                rel="noopener"
+                aria-label="Discord"
+              >
+                <i class="ri-discord-fill" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#discord">Discord presence</a></li>
+              <li><a href="#mods">Mods</a></li>
+              <li><a href="#install">Download</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Resources</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://github.com/icyxvcz/Icystrap/releases"
+                  target="_blank"
+                  rel="noopener"
+                  >Release notes</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/icyxvcz/Icystrap/issues"
+                  target="_blank"
+                  rel="noopener"
+                  >Report an issue</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Community</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://discord.gg/43nUV95XsZ"
+                  target="_blank"
+                  rel="noopener"
+                  >Discord server</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/icyxvcz/IcystrapApp"
+                  target="_blank"
+                  rel="noopener"
+                  >GitHub</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; <span data-year>2026</span> Icystrap</p>
+          <p>
+            Roblox is a trademark of Roblox Corporation. Use third-party
+            launchers at your own risk.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

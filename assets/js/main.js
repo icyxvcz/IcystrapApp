@@ -3,7 +3,7 @@
 (function () {
   "use strict";
 
-  /* --- sticky header shadow ---------------------------------------------- */
+  /*  sticky header shadow  */
   var header = document.querySelector(".site-header");
   function onScroll() {
     if (header) header.classList.toggle("scrolled", window.scrollY > 8);
@@ -11,7 +11,7 @@
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 
-  /* --- mobile navigation ------------------------------------------------- */
+  /*  mobile navigation  */
   var toggle = document.querySelector(".nav-toggle");
   var links = document.querySelector(".nav-links");
 
@@ -29,7 +29,7 @@
     });
   }
 
-  /* --- copy buttons ------------------------------------------------------ */
+  /*  copy buttons  */
   document.querySelectorAll(".copy-btn").forEach(function (btn) {
     btn.addEventListener("click", function () {
       var row = btn.closest(".copy-row");
@@ -68,7 +68,7 @@
     });
   });
 
-  /* --- scroll reveal ----------------------------------------------------- */
+  /*  scroll reveal  */
   var revealables = document.querySelectorAll(".reveal");
 
   if ("IntersectionObserver" in window) {
@@ -97,16 +97,12 @@
     revealables.forEach(function (el) { el.classList.add("in"); });
   }
 
-  /* --- year in footer ---------------------------------------------------- */
+  /*  year in footer  */
   document.querySelectorAll("[data-year]").forEach(function (el) {
     el.textContent = String(new Date().getFullYear());
   });
 
-  /* --- custom cursor dot -------------------------------------------------
-     The blue dot is a real element positioned from here. Everything is
-     opt-in and reversible: if anything below bails out, the native cursor
-     stays exactly as the browser would render it.
-     -------------------------------------------------------------------- */
+
   (function () {
     if (!window.matchMedia) return;
 
@@ -214,7 +210,7 @@
     }, { passive: true });
   })();
 
-  /* --- latest release version (best effort, no layout shift on failure) --- */
+  /* latest release version */
   var versionSlots = document.querySelectorAll("[data-latest-version]");
   if (versionSlots.length && window.fetch) {
     fetch("https://api.github.com/repos/icyxvcz/Icystrap/releases/latest", {
@@ -225,6 +221,6 @@
         if (!data || !data.tag_name) return;
         versionSlots.forEach(function (el) { el.textContent = data.tag_name; });
       })
-      .catch(function () { /* keep the fallback text */ });
+      .catch(function () { /* ignore */ });
   }
 })();

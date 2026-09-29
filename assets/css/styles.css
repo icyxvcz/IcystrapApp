@@ -78,23 +78,6 @@ kbd {
 
 ::selection { background: rgba(56, 189, 248, 0.32); }
 
-/* --------------------------------------------------------------------------
-   Custom cursor — pure CSS blue dot
-   CSS cannot replace the OS pointer with a shape, only with an image, so the
-   native cursor is hidden and a real element is drawn in its place and moved
-   from JS. Nothing here depends on a cursor image file.
-
-   `cursor: none` is scoped to .has-dot-cursor, which is only set when JS runs
-   and the device actually has a fine pointer — so a failed script or a touch
-   device can never leave the user with no cursor at all.
-
-   `!important` is deliberate here. Component rules across this file set
-   `cursor: pointer` at varying specificity — `.footer-col a` (0,1,1),
-   `.socials a` (0,1,1) and `.asset.active` (0,2,0) all outrank a plain
-   `.has-dot-cursor *` (0,1,0). Chasing each one with a matching selector is
-   brittle: any new component rule can silently reintroduce the native cursor.
-   One `!important` override is the reliable fix.
-   -------------------------------------------------------------------------- */
 
 html.has-dot-cursor,
 html.has-dot-cursor * { cursor: none !important; }
@@ -165,9 +148,7 @@ html.has-dot-cursor * { cursor: none !important; }
   .ic-cursor { display: none; }
 }
 
-/* --------------------------------------------------------------------------
-   Layout helpers
-   -------------------------------------------------------------------------- */
+/* Layout helpers */
 
 .container {
   width: 100%;
@@ -207,7 +188,7 @@ html.has-dot-cursor * { cursor: none !important; }
   height: 2px;
   border-radius: 2px;
   background: var(--grad);
-  /* See `.btn`: gradient backgrounds default to `repeat`, which can paint a
+  /* See btn: gradient backgrounds default to repeat, which can paint a
      stray edge pixel on small rounded elements. */
   background-repeat: no-repeat;
 }
@@ -229,9 +210,7 @@ html.has-dot-cursor * { cursor: none !important; }
   color: transparent;
 }
 
-/* --------------------------------------------------------------------------
-   Background glow / grid
-   -------------------------------------------------------------------------- */
+/* Background glow / grid */
 
 .bg-fx {
   position: fixed;
@@ -265,16 +244,12 @@ html.has-dot-cursor * { cursor: none !important; }
   -webkit-mask-image: radial-gradient(ellipse 90% 60% at 50% 0%, #000 20%, transparent 78%);
 }
 
-/* --------------------------------------------------------------------------
-   Header
-   -------------------------------------------------------------------------- */
+/* Header */
 
 .site-header {
   position: sticky;
   top: 12px;
   z-index: 60;
-  /* A floating rounded bar: inset from the viewport edges so the corners are
-     visible, and capped slightly wider than the content column. */
   width: calc(100% - 32px);
   max-width: calc(var(--container) + 48px);
   margin: 0 auto;
@@ -290,8 +265,6 @@ html.has-dot-cursor * { cursor: none !important; }
 
 .site-header.scrolled {
   background: rgba(5, 7, 13, 0.92);
-  /* The border is now on every side, so the scrolled state strengthens it
-     rather than adding a bottom edge. */
   border-color: var(--border-strong);
   box-shadow: 0 22px 48px -26px rgba(0, 0, 0, 0.95);
 }
@@ -379,9 +352,7 @@ html.has-dot-cursor * { cursor: none !important; }
 
 .nav-toggle svg { width: 20px; height: 20px; }
 
-/* --------------------------------------------------------------------------
-   Buttons
-   -------------------------------------------------------------------------- */
+/* Buttons */
 
 .btn {
   display: inline-flex;
@@ -396,10 +367,6 @@ html.has-dot-cursor * { cursor: none !important; }
   border: 1px solid transparent;
   cursor: pointer;
   white-space: nowrap;
-  /* A gradient background only paints the padding box by default, so the 1px
-     transparent border ring is left unpainted — that seam is the thin line
-     visible around the edge of every pill button. Painting from border-box
-     covers it, and `no-repeat` stops the gradient tiling past that. */
   background-origin: border-box;
   background-clip: border-box;
   background-repeat: no-repeat;
@@ -410,9 +377,6 @@ html.has-dot-cursor * { cursor: none !important; }
 .btn svg { width: 18px; height: 18px; flex: none; }
 
 .btn-primary {
-  /* `background-image` rather than the `background` shorthand: the shorthand
-     resets `background-repeat` back to `repeat`, which reintroduces the edge
-     artifact the `.btn` rule guards against. */
   background-image: var(--grad);
   color: #04070f;
   box-shadow: 0 14px 34px -14px rgba(56, 189, 248, 0.85);
@@ -443,9 +407,7 @@ html.has-dot-cursor * { cursor: none !important; }
 
 .btn-block { width: 100%; }
 
-/* --------------------------------------------------------------------------
-   Hero
-   -------------------------------------------------------------------------- */
+/* Hero */
 
 .hero {
   position: relative;
@@ -521,7 +483,6 @@ html.has-dot-cursor * { cursor: none !important; }
 
 .hero-meta svg { width: 16px; height: 16px; color: var(--sky); flex: none; }
 
-/* copy row (used by the mods section) */
 
 .copy-row {
   display: flex;
@@ -531,8 +492,6 @@ html.has-dot-cursor * { cursor: none !important; }
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 11px 12px;
-  /* The mods path is long and unbreakable. Without this it widens its own
-     content box and drags the whole page into horizontal overflow on mobile. */
   min-width: 0;
   max-width: 100%;
 }
@@ -568,9 +527,7 @@ html.has-dot-cursor * { cursor: none !important; }
 .copy-btn.done { color: #34d399; border-color: rgba(52, 211, 153, 0.5); }
 .copy-btn svg { width: 14px; height: 14px; }
 
-/* --------------------------------------------------------------------------
-   Hero app screenshot
-   -------------------------------------------------------------------------- */
+/* Hero app screenshot */
 
 .app-shot {
   position: relative;
@@ -608,24 +565,18 @@ html.has-dot-cursor * { cursor: none !important; }
   box-shadow: var(--shadow), 0 0 90px -34px rgba(56, 189, 248, 0.75);
 }
 
-/* Small captures must not be stretched past their native size: the Rich
-   Presence card is only 486px wide, and the single-column tablet layout would
-   otherwise upscale it to ~1.5x and blur the UI text. */
+
 .app-shot--native {
   max-width: 486px;
   margin-inline: auto;
 }
 
-/* --------------------------------------------------------------------------
-   Cards / grids
-   -------------------------------------------------------------------------- */
+
 
 .grid { display: grid; gap: 20px; }
 .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-
-/* Prevent grid/flex children from forcing horizontal overflow */
 .hero-grid > *,
 .split > *,
 .grid > *,
@@ -717,8 +668,6 @@ html.has-dot-cursor * { cursor: none !important; }
 
 .asset-grid {
   display: grid;
-  /* Two columns. An odd tile count would strand the last tile on its own row,
-     so the rule below lets that final tile span both columns instead. */
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
 }
@@ -738,8 +687,7 @@ html.has-dot-cursor * { cursor: none !important; }
 .asset svg { width: 26px; height: 26px; margin: 0 auto 8px; color: var(--sky); }
 .asset.active { border-color: rgba(103, 232, 249, 0.45); color: #e0f2fe; box-shadow: 0 0 0 1px rgba(103, 232, 249, 0.2); }
 
-/* Text-only tile: keeps the row height even with the icon tiles, so the grid
-   stays aligned. Used by the "Preferred emoji type" mod. */
+
 .asset--text {
   display: flex;
   align-items: center;
@@ -749,18 +697,11 @@ html.has-dot-cursor * { cursor: none !important; }
   line-height: 1.35;
 }
 
-/* With an odd number of tiles the last one would sit alone in the left column.
-   Let it span the row instead, which reads as a deliberate footer tile. */
 .asset:last-child:nth-child(odd) { grid-column: 1 / -1; }
 
-/* The Mouse cursor tile has no extra swatch: the site already has a custom
-   cursor, so drawing a second dot here just produced two dots at different
-   centres. Hovering the tile only grows the real cursor dot — see
-   `.ic-cursor__dot`. */
 
-/* --------------------------------------------------------------------------
-   Steps
-   -------------------------------------------------------------------------- */
+
+/*  Steps */
 
 .steps { counter-reset: step; display: grid; gap: 18px; }
 
@@ -785,16 +726,13 @@ html.has-dot-cursor * { cursor: none !important; }
   font-size: 1.05rem;
   color: #04070f;
   background: var(--grad);
-  /* See `.btn`: gradient backgrounds default to `repeat`. */
   background-repeat: no-repeat;
 }
 
 .step h3 { font-size: 1.02rem; margin-bottom: 5px; }
 .step p { color: var(--text-muted); font-size: 0.9rem; margin: 0; }
 
-/* --------------------------------------------------------------------------
-   CTA band
-   -------------------------------------------------------------------------- */
+/* CTA band */
 
 .cta-band {
   position: relative;
@@ -825,14 +763,10 @@ html.has-dot-cursor * { cursor: none !important; }
 
 .cta-band .hero-cta { position: relative; justify-content: center; margin: 0; }
 
-/* --------------------------------------------------------------------------
-   Stats strip
-   -------------------------------------------------------------------------- */
+/* Stats strip */
 
 .stats {
   display: grid;
-  /* Three stats: one column each, so no empty cell can show the container's
-     background through as a solid block. */
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
   border: 1px solid var(--border);
@@ -859,9 +793,7 @@ html.has-dot-cursor * { cursor: none !important; }
 
 .stat span { font-size: 0.8rem; color: var(--text-dim); font-weight: 600; }
 
-/* --------------------------------------------------------------------------
-   Footer
-   -------------------------------------------------------------------------- */
+/* Footer*/
 
 .site-footer {
   border-top: 1px solid var(--border);
@@ -933,9 +865,7 @@ html.has-dot-cursor * { cursor: none !important; }
 
 .socials svg { width: 18px; height: 18px; }
 
-/* --------------------------------------------------------------------------
-   Scroll reveal
-   -------------------------------------------------------------------------- */
+/* Scroll reveal */
 
 .reveal {
   opacity: 0;
@@ -946,18 +876,13 @@ html.has-dot-cursor * { cursor: none !important; }
 
 .reveal.in { opacity: 1; transform: none; }
 
-/* --------------------------------------------------------------------------
-   Responsive
-   -------------------------------------------------------------------------- */
+/* Responsive */
 
 @media (max-width: 1020px) {
   .hero-grid { grid-template-columns: 1fr; gap: 48px; }
   .hero-lead { max-width: none; }
   .split { grid-template-columns: 1fr; gap: 34px; }
   .split.reverse .split-art { order: 0; }
-  /* Only panels holding a small capped capture hug-wrap around it; leaving
-     this on every panel made the mods panel shrink-to-fit its max-content,
-     and its long nowrap mod path then overflowed the viewport on mobile. */
   .split-art--hug { justify-self: start; }
   .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
@@ -966,8 +891,6 @@ html.has-dot-cursor * { cursor: none !important; }
 @media (max-width: 820px) {
   .nav-links {
     position: absolute;
-    /* Anchored to the bottom of the floating pill rather than a fixed 70px, so
-       it stays attached if the bar's height ever changes. */
     top: calc(100% + 8px);
     left: 0;
     right: 0;
@@ -993,8 +916,6 @@ html.has-dot-cursor * { cursor: none !important; }
   .section { padding: 72px 0; }
   .grid-3 { grid-template-columns: 1fr 1fr; }
   .stats { grid-template-columns: repeat(2, 1fr); }
-  /* Odd count again at this width: let the last stat fill the row instead of
-     leaving an empty cell. */
   .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
 }
 
@@ -1006,10 +927,6 @@ html.has-dot-cursor * { cursor: none !important; }
   .footer-grid { grid-template-columns: 1fr; }
   .cta-band { padding: 44px 22px; }
   .hero-cta .btn { width: 100%; }
-  /* Stacked full width, both buttons are the same width but their labels are
-     different lengths, so centring each one lands the icon at a different x
-     (the Discord icon sat 8px right of the download icon). Aligning the content
-     from a common inset makes the icons and the labels line up. */
   .cta-band .btn { justify-content: flex-start; }
   .hero { padding: 56px 0 60px; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
@@ -1021,9 +938,7 @@ html.has-dot-cursor * { cursor: none !important; }
   * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
 
-/* --------------------------------------------------------------------------
-   Utilities
-   -------------------------------------------------------------------------- */
+/* Utilities */
 
 .sr-only {
   position: absolute;
@@ -1043,7 +958,6 @@ html.has-dot-cursor * { cursor: none !important; }
   left: 26px;
   z-index: 100;
   padding: 10px 18px;
-  /* Fully rounded now that the header no longer sits flush to the top edge. */
   border-radius: 999px;
   background: var(--sky);
   color: #04070f;
